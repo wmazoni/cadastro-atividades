@@ -177,6 +177,8 @@
     <Compile Include="CADASTRO.aspx.designer.cs">
       <DependentUpon>CADASTRO.aspx</DependentUpon>
     </Compile>
+    <Compile Include="ctlTarefa.cs" />
+    <Compile Include="mdlTarefa.cs" />
     <Compile Include="PRINCIPAL.aspx.cs">
       <DependentUpon>PRINCIPAL.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -224,16 +226,6 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="CamadaModelo\CamadaModelo.csproj">
-      <Project>{76d2c109-1b7f-4407-a635-9e473ca8b982}</Project>
-      <Name>CamadaModelo</Name>
-    </ProjectReference>
-    <ProjectReference Include="ClassLibrary1\CamadaControle.csproj">
-      <Project>{471d390d-4b0f-41fe-b32f-94593bef7344}</Project>
-      <Name>CamadaControle</Name>
-    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

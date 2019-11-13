@@ -42,7 +42,19 @@ namespace ProjetoFacuS
             ano = Calendario.SelectedDate.Year;
             _mdlTarefa.Tarefa = TxtTarefa.Text;
             //lblResultado.Text = Calendario.SelectedDate.ToString();
-            _mdlTarefa.Prazo = Calendario.SelectedDate.Date;
+            _mdlTarefa.Prazo = Calendario.SelectedDate;
+            _mdlTarefa.Atividade = DropDownList1.SelectedValue;
+
+            bool retornoInsert = _ctlTarefa.Cadastrar(_mdlTarefa);
+
+            if (retornoInsert == true)
+            {
+                ScriptManager.RegisterStartupScript(this,
+                                                    this.GetType(),
+                                                    "sucesso",
+                                                    "alert('Dados da atividade gravado com sucesso!');",
+                                                    true);
+            }
         }
 
         protected void Calendar1_SelectionChanged(object sender, EventArgs e)
