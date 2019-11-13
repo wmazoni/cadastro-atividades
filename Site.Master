@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="ProjetoFacuS.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="pt">
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - Meu aplicativo ASP.NET</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+
+    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <style type="text/css">
+        .auto-style1 {
+            width: 73px;
+            height: 61px;
+            margin-left: 0px;
+        }
+        .auto-style2 {
+            float: left;
+            height: 43px;
+            padding: 15px 15px;
+            font-size: 18px;
+            line-height: 20px;
+            width: 61px;
+        }
+    </style>
+
+</head>
+<body>
+    <form runat="server">
+
+        <div class="navbar navbar-inverse navbar-fixed-top" style="left: -10px; right: -2px; top: -42px; height: 147px">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    &nbsp;</div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/">Página inicial</a></li>
+                        <li><a runat="server" href="~/About">Sobre</a></li>
+                        <li><a runat="server" href="~/Contact">Contato</a></li>
+                    </ul>
+                </div>
+                    <a class="auto-style2" runat="server" href="~/">&nbsp;<img class="auto-style1" src="imag/hqdefault.jpg" id="UNIP"><asp:Label  runat="server" ></asp:Label>
+                </img></a></div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                <p>
+                    &nbsp;</p>
+            </asp:ContentPlaceHolder>
+            <p>
+                &nbsp;</p>
+            <footer>
+                <p>&nbsp;</p>
+            </footer>
+        </div>
+
+        <p>
+            <asp:Button ID="Button2" runat="server" PostBackUrl="~/PRINCIPAL.aspx" Text="PRINCIPAL" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a class="auto-style3" runat="server" href="~/">
+            <asp:Button ID="Button1" runat="server" Height="26px" OnClick="Button1_Click" Text="SAIR" Width="74px" />
+            </a>
+        </p>
+        <p>
+            &nbsp;</p>
+
+    </form>
+    <p>
+        &nbsp;</p>
+    <p>
+        &nbsp;</p>
+    <p>
+&nbsp;<%: DateTime.Now.Year %>- Meu aplicativo ASP.NET</p>
+</body>
+</html>
