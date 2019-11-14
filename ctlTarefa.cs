@@ -2,8 +2,6 @@
 using System.Configuration;
 using System.Data;
 using System.Data.OleDb;
-using CamadaControle;
-using CamadaModelo;
 
 namespace CamadaControle
 {
